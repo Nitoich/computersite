@@ -1,0 +1,261 @@
+* { margin: 0; padding: 0; }
+
+.header {
+    border-top:10px #4b7bec solid;
+    border-bottom: 10px #4b7bec solid;
+}
+
+.wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.header__content {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__content > * {
+    flex-grow: 1;
+}
+
+.header__logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 12px;
+}
+
+.header__logo a:hover {
+    color: #4b7bec;
+}
+
+.header__search {
+    flex-grow: 2;
+}
+
+.search-form {
+    display: flex;
+}
+
+.header__search .search-input{
+    width: 80%;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px 0 0 5px;;
+    border: 3px solid #4b7bec;
+}
+
+.header__search .search-btn {
+    font-size: 20px;
+    text-align: right;
+    width:40px;
+    outline: none;
+    border:none;
+    background: #4b7bec;
+    border-radius: 0 5px 5px 0;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__search .search-btn:hover {
+    background: #1c48c9;
+}
+
+.search-btn:hover input.search-input {
+    border: none;
+}
+
+.navigation__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation__list > .navigation__item a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.navigation__list > .navigation__item a:hover {
+    color: #4b7bec;
+}
+
+/* slider */
+
+.slider__images {
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__button {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    border-radius: 10px;
+    top: calc(50% - 25px);
+    border: none;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__right {
+    right: 10px;
+}
+
+.slider__left {
+    left: 10px;
+}
+
+.slider__left i {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: translateX(10px) rotateZ(45deg);
+}
+
+.slider__right i {
+    display:inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: translateX(-10px) rotateZ(-135deg);
+}
+
+.slider__list {
+    display: flex;
+    height: inherit;
+    transition: transform 1s;
+}
+
+.slider__images:hover .slider__list {
+    transform: translateX(-100%);
+}
+
+.slider__images:active .slider__list {
+    transform: translateX(-200%);
+}
+
+.slider__item {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    height: inherit;
+    position: relative;
+    min-width: 100%;
+}
+
+.slider__item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ABOUT */
+
+.about {
+    margin: 20px 0;
+}
+
+.about__content {
+    font-size: 20px;
+}
+
+.about__content p {
+    margin: 5px 0;
+}
+
+.title {
+    text-align: center;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #4b7bec;
+    padding: 20px 0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.6);
+}
+
+.footer a:hover {
+    color: rgba(0,0,0,1);
+    font-weight: 1000;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.button-link {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    background: #4b7bec;
+    margin: 20px auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.button-container {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1467px) {
+    .wrapper {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 885px) {
+    .header__content,
+    .footer__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .header__content > * {
+        margin: 20px 0;
+    }
+
+    .navigation__item {
+        margin: 0 5px;
+    }
+}
