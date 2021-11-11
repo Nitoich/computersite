@@ -1,7 +1,13 @@
 * { margin: 0; padding: 0; }
 
 body{
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .header {
@@ -260,6 +266,7 @@ body{
 .main__content .goods__list {
     width: 70%;
     border: 2px solid #4b7bec;
+    min-height:70vh;
     border-radius: 5px;
 }
 
@@ -275,7 +282,6 @@ body{
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -293,15 +299,56 @@ body{
     justify-content: center;
 }
 
+.goods__item > a {
+    display: block;
+}
+
+.info__decr {
+    transition: 0.5s;
+}
+
+.info__decr::-webkit-scrollbar {
+    width: 5px;
+}
+
+.info__decr::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.info__decr::-webkit-scrollbar-track {
+    background-color: #1c48c9;
+    border-radius: 20px;
+}
+
+.goods__item:hover .info__decr {
+    overflow: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+
 .goods__item .image-container img {
     width: auto;
     height: 100%;
     margin: 0 auto;
+    transition: 0.5s;
+}
+
+.goods__item:hover img {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.goods__item button {
+    cursor: pointer;
 }
 
 .goods__item p {
     overflow: hidden;
-    height: 40px;
+    height: 60px;
 }
 
 .info__name {
@@ -313,9 +360,9 @@ body{
     width: 65%;
 }
 
-.info-container button {
+.info-container .cards {
     position: absolute;
-    right: 2px;
+    right:0;
 }
 
 .info__name {
