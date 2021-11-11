@@ -8,6 +8,7 @@ body{
 
 main {
     flex: 1;
+    margin: 20px 0 ;
 }
 
 .header {
@@ -365,11 +366,49 @@ main {
     right:0;
 }
 
+
 .info__name {
     font-size: 20px;
     margin-bottom: 5px;
 }
 
+.short-info {
+    display: flex;
+    border: 2px solid #4b7bec;
+    padding: 10px;
+}
+
+.image-cont > li{
+    width: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin: 5px 0;
+}
+
+.active {
+    border: 1px solid #4b7bec;
+}
+
+.image-cont > li:hover {
+    transform: perspective(100px) translateZ(10px);
+}
+
+.image-cont > li img{
+    width: auto;
+    height: 100px;
+}
+
+.goods__images {
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.current-image img {
+    width: auto;
+    height: 400px;
+}
 @media screen and (max-width: 1467px) {
     .wrapper {
         width: 80%;
