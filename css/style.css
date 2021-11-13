@@ -52,7 +52,7 @@ main {
     display: flex;
 }
 
-.header__search .search-input{
+.search-input{
     width: 80%;
     outline: none;
     font-size: 20px;
@@ -60,7 +60,7 @@ main {
     border: 3px solid #4b7bec;
 }
 
-.header__search .search-btn {
+.search-btn {
     font-size: 20px;
     text-align: right;
     width:30px;
@@ -73,11 +73,11 @@ main {
     cursor: pointer;
 }
 
-.header__search .search-btn:hover {
+.search-btn:hover {
     background: #1c48c9;
 }
 
-.search-btn:hover input.search-input {
+.search-btn:hover .search-input {
     border: none;
 }
 
@@ -455,7 +455,7 @@ main {
 
 .other__goods-container {
     border: 2px solid #4b7bec;
-    border-radius: 20px 20px 0 0 ;
+    border-radius: 20px 20px 20px 20px ;
 }
 
 .other__goods__list {
@@ -467,21 +467,19 @@ main {
 }
 
 .other__goods__list::-webkit-scrollbar {
-    height: 10px;
-    position: absolute;
-    bottom: -1px;
+    width: 2em; 
 }
 
 .other__goods__list::-webkit-scrollbar-track {
-    background: #1c48c9;
-    border-radius: 20px 20px
+    background: transparent;
+    border-radius: 100vw;
+    margin-block: .5em;
 }
 
 .other__goods__list::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 10px;
-    width: 100px;
-    margin: 5px;
+    background: blue;
+    border: .25em solid transparent;
+    border-radius: 100vw;
 }
 
 .other__image {
@@ -520,6 +518,132 @@ main {
 
 .other__item > .other__btn button{
     cursor: pointer;
+}
+
+.goods__search {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.login {
+    height: 683px;
+}
+
+.login__content,
+.register__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 683px;
+}
+
+.login__panel,
+.register__panel {
+    border-radius: 20px;
+    border: 2px #4b7bec solid;
+    padding: 30px;
+}
+
+.login__panel form,
+.register__panel form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__panel form > *,
+.register__panel form > * {
+    margin: 10px 0;
+}
+
+.cards__content {
+    padding: 10px;
+    border: 2px #4b7bec solid;
+    border-radius: 5px;
+}
+
+.cards__container {
+    list-style:none;
+    height: auto;
+}
+
+.cards__row {
+    display: flex;
+    align-items: center;
+}
+
+.cards__item {
+    border: 2px #4b7bec solid;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    transition: 1s;
+}
+
+.cards__item:hover {
+    transform: perspective(500px) translateZ(30px);
+    background: #4b7bec;
+}
+
+.cards__item:hover .cards__image {
+    overflow: hidden;
+    border: 3px #000 solid;
+    border-radius: 20px;
+}
+
+.cards__image {
+    height: 100px;
+    transition: 1s;
+}
+
+.cards__image img {
+    height: 100%;
+    width: auto;
+    margin: 0 auto;
+}
+
+.cards__name {
+    margin-left: 20px;
+}
+
+.cards__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards__result > * {
+    margin: 5px 0;
+}
+
+.cards__result button {
+    padding: 5px 20px;
+    background: #4b7bec;
+    border: 2px #1c48c9 solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cards__result button:hover {
+    background: #1c48c9;
+}
+
+.cards__result button:active {
+    border: 2px #4b7bec solid;
+}
+
+.cards__delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards__price {
+    margin-right: 20px;
 }
 
 @media screen and (max-width: 1467px) {
